@@ -1,1 +1,1 @@
-# leechy_spetrumeter
+## leechy spectrum analyzer
