@@ -21,9 +21,6 @@ for file in files:
     file = open(folder + file, "r", encoding="ISO-8859-1")
     name = file.name[10:].replace(".txt", "").split("_")
 
-    if name[1] == "Store":
-        continue
-
     print(f"{name[1]} {name[-1]}%")
 
     data = file.readlines()[17:529]
