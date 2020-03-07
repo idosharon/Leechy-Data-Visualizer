@@ -1,15 +1,15 @@
-# Leechy Labs - Spectrum analyzer
+## Leechy Labs - Spectrum analyzer
 
 Using Python to analyze the spectrum. 
 created for leechy, check out: leechy.idosharon.com[https://leechy.idosharon.com/]
 
-## Set Up
+### Set Up
 
 * Install [Python](https://www.python.org/) 🐍 
 
 * Use the package manager [pip](https://pip.pypa.io/en/stable/) to install selenium and the other packages 📦.
 
-## Packages installation
+### Packages installation
 
 Get into the folder and Install the packages with the command:
 
@@ -17,7 +17,7 @@ Get into the folder and Install the packages with the command:
 pip install --user -r requirements.txt
 ```
 
-## Imports
+### Imports
 
 ```python
 import matplotlib.pyplot as plt
@@ -25,11 +25,11 @@ import os
 import pandas as pd
 ```
 
-## Author
+### Author
 
 Written by Ido Sharon in Python 🐍
 
-## License
+### License
 ```
 MIT License
 
