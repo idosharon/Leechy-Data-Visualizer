@@ -1,5 +1,5 @@
 #  Copyright (c) 2020 Ido Sharon.
-#  This Software created for leechy by Ido Sharon.
+#  This Software was created for leechy by Ido Sharon.
 
 import matplotlib.pyplot as plt
 import os
