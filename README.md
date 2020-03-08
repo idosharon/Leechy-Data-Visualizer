@@ -1,4 +1,4 @@
-## Leechy Labs - Spectrum analyzer
+## Leechy - Spectrum analyzer
 
 Using Python to analyze the spectrum. 
 created for leechy, check out: [leechy.idosharon.com](https://leechy.idosharon.com/)
