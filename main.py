@@ -35,12 +35,17 @@ for file in files:
     [x_values.append(point[0]) for point in points_data]
     [y_values.append(point[1]) for point in points_data]
 
-    plt.figure(num="leechy | " + folder)
+    plt.figure(num="leechy | data from " + folder)
     plt.plot(x_values, y_values, "--" if name[1] == "water" else "-",
              label="water" if name[1] == "water" else f"{name[1]} {name[-1]}%", color=colors[counter])
     plt.ylabel('OD value')
     plt.xlabel('wave length')
     plt.legend()
+
+    plt.figure(num="leechy | comparison")
+    plt.plot([val[0].replace(name[1], "") for val in comparison], [val[-1] for val in comparison], "-", color="red")
+    plt.ylabel(f'OD value at - x={str(const)}')
+    plt.xlabel(f'precents of {name[1]}')
 
     comparison.append(["water" if name[1] == "water" else f"{name[1]} {name[-1]}%", y_values[x_values.index(const)]])
 
@@ -54,6 +59,6 @@ def last(elem):
 comparison = sorted(comparison, key=last)
 comparison = {f'{name[1]} percent: ': [percent[0].replace(name[1], "") for percent in comparison],
               'OD value: ': [val[-1] for val in comparison]}
-print(pd.DataFrame(data=comparison))
+print(pd.DataFrame(data=comparison, index=files))
 
 plt.show()
