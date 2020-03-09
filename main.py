@@ -45,7 +45,7 @@ for file in files:
     plt.figure(num="leechy | comparison")
     plt.plot([val[0].replace(name[1], "") for val in comparison], [val[-1] for val in comparison], "-", color="red")
     plt.ylabel(f'OD value at - x={str(const)}')
-    plt.xlabel(f'precents of {name[1]}')
+    plt.xlabel(f'Percents of {name[1]}')
 
     comparison.append(["water" if name[1] == "water" else f"{name[1]} {name[-1]}%", y_values[x_values.index(const)]])
 
@@ -57,7 +57,7 @@ def last(elem):
 
 
 comparison = sorted(comparison, key=last)
-comparison = {f'percents: ': [val[0] for val in comparison],
+comparison = {f'Percents: ': [val[0] for val in comparison],
               'OD value: ': [val[-1] for val in comparison]}
 print(pd.DataFrame(data=comparison, index=files))
 
