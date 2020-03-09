@@ -18,7 +18,7 @@ const = 1182.69
 
 for file in files:
 
-    file = open(folder + file, "r", encoding="ISO-8859-1")
+    file = open(folder + file, "r")
     name = file.name[10:].replace(".txt", "").split("_")
 
     print(f"{name[1]} {name[-1]}%")
@@ -57,7 +57,7 @@ def last(elem):
 
 
 comparison = sorted(comparison, key=last)
-comparison = {f'{name[1]} percent: ': [percent[0].replace(name[1], "") for percent in comparison],
+comparison = {f'percents: ': [val[0] for val in comparison],
               'OD value: ': [val[-1] for val in comparison]}
 print(pd.DataFrame(data=comparison, index=files))
 
